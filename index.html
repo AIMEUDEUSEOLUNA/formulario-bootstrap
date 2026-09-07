@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+
+            <input type="hidden" id="evento" name="evento" value="mostra-tecnologia-2026">
+
+            <h1>Mostra de Tecnologia e Inovação do Lunão!</h1>
+
+                <div class="row">
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="nome" class="form-label">Nome completo</label>
+                        <input type="text" id="nome" name="nome" class="form-control" required>
+                    </div>
+
+                    <div class="col-12 col-md-6 mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+
+                </div>
+                
+            <div class="mb-3">
+                <label for="idade" class="form-label">Idade</label>
+                <input type="number" id="idade" name="idade" class="form-control" min="14" max="100" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input 
+                    type="tel" 
+                    id="telefone" 
+                    name="telefone" 
+                    class="form-control"
+                    pattern="\(\d{2}\)\d{5}-\d{4}"
+                    placeholder="(11)99999-9999"
+                    required
+                >
+            </div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" id="senha" name="senha" class="form-control" required>
+                <div class="form-text">Não use uma senha real, bobao</div>
+            </div>          
+            
+            <div class="mb-3">
+                <label for="site" class="form-label">Site ou portfólio</label>
+                <input type="url" id="site" name="site" class="form-control" placeholder="https://pudim.com">
+            </div>            
+
+            <div class="mb-3">
+                <label for="pesquisa" class="form-label">Pesquisar área de interesse</label>
+                <input type="search" id="pesquisa" name="pesquisa" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="data" class="form-label">Data de nascimento</label>
+                <input type="date" id="data" name="data" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="mes" class="form-label">Mês de participação</label>
+                <input type="month" id="mes" name="mes" class="form-control">
+            </div>            
+            
+            <div class="mb-3">
+                <label for="semana" class="form-label">Semana do evento</label>
+                <input type="week" id="semana" name="semana" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="horario" class="form-label">Horário disponível</label>
+                <input type="time" id="horario" name="horario" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="data_hora" class="form-label">Data e hora da apresentação</label>
+                <input type="datetime-local" id="data_hora" name="data_hora" class="form-control">
+            </div>            
+
+            <div class="mb-3">
+                <label for="cor" class="form-label">Cor preferida</label>
+                <input type="color" id="cor" name="cor">
+            </div>
+
+            <div class="mb-3">
+                <label for="experiencia" class="form-label">Nível de experiência</label>
+                <input type="range" id="experiencia" name="experiencia" class="form-range" min="0" max="10" step="1">
+            </div>            
+
+            <div class="mb-3">
+                <label for="arquivo" class="form-label">Enviar projeto</label>
+                <input type="file" id="arquivo" name="arquivo" class="form-control" accept=".pdf,.zip,.rar">
+            </div>     
+            
+            <div class="mb-3">
+                <label for="formacao" class="form-label">Formação</label>
+                <select id="formacao" name="formacao" class="form-select" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="ensino-medio">Ensino médio</option>
+                    <option value="tecnico">Curso técnico</option>
+                    <option value="graduacao">Graduação</option>
+                    <option value="pos">Pós-graduação</option>
+                </select>
+            </div>            
+
+            <div class="mb-3">
+                <label for="projeto" class="form-label">Descrição do projeto</label>
+                <textarea id="projeto" name="projeto" class="form-control" rows="5" maxlength="500" placeholder="Descreva seu projeto..."></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="area" class="form-label">Área do projeto</label>
+                <input list="areas" id="area" name="area" class="form-control">
+
+                <datalist id="areas">
+                    <option value="Inteligência Artificial">
+                    <option value="Desenvolvimento Web">
+                    <option value="Engenharia de Software">
+                    <option value="Robótica">
+                    <option value="Segurança da Informação">
+                </datalist>
+            </div>
+
+            <fieldset class="mb-3">
+                <legend>Forma de participação</legend>
+
+                <div class="form-check">
+                    <input type="radio" id="presencial" name="participacao" value="presencial" class="form-check-input" required>
+                    <label for="presencial" class="form-check-label">Presencial</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" id="online" name="participacao" value="online" class="form-check-input">
+                    <label for="online" class="form-check-label">Online</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="mb-3">
+                <legend>Áreas de interesse</legend>
+
+                <div class="form-check">
+                    <input type="checkbox" id="ia" name="interesses" value="ia" class="form-check-input">
+                    <label for="ia" class="form-check-label">Inteligência Artificial</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="web" name="interesses" value="web" class="form-check-input">
+                    <label for="web" class="form-check-label">Desenvolvimento Web</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="games" name="interesses" value="games" class="form-check-input">
+                    <label for="games" class="form-check-label">Desenvolvimento de Jogos</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" id="seguranca" name="interesses" value="seguranca" class="form-check-input">
+                    <label for="seguranca" class="form-check-label">Segurança da Informação</label>
+                </div>
+            </fieldset>
+
+            <div class="mb-3">
+                <input type="image" src="img/enviar.png" alt="Enviar formulário" width="100">
+            </div>
+
+
+
+
+
+            <div>
+               <button type="submit" class="btn btn-primary">Enviar</button> 
+            </div>
+
+            <div>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+            </div>            
+
+            <div>
+                <button type="button" class="btn btn-outline-secondary">Teste</button>
+            </div>
+            
+            
+        </form>
+    </div> 
+
+</body>
+</html>
