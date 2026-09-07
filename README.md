@@ -88,5 +88,11 @@ O elemento textarea cria uma área destinada à entrada de textos maiores.
 ## Aluno
 
 JOÃO PEDRO LUNA
+## GitHub Pages
 
+[Link para o site](https://aimeudeuseoluna.github.io/formulario-bootstrap/)
+
+## Repositório
+
+[Link para o repositório](https://github.com/AIMEUDEUSEOLUNA/formulario-bootstrap)
 
